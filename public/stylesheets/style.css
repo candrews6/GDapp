@@ -4,24 +4,12 @@ body {
   font: 14px;
 }
 
-a {
-  color: #00B7FF;
-}
-
 img {
-  /* height: "130";
-  width: "500"; */
   width: 100%;
   text-align: center;
   padding-top: 10rem;
   padding-bottom: 10rem;
 }
-
-/* div {
-  width: 100%;
-  display: inline-block;
-  overflow: hidden;
-} */
 
 a {
   width: 33%;
@@ -39,16 +27,3 @@ table {
 svg {
   display: inline-block;
 }
-
-/* #path1 {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  transform: rotate(0deg);
-  transform-origin: 50% 50%;
-  -ms-transform: rotate(0deg);
-  -ms-transform-origin: 50% 50%;
-  -webkit-transform: rotate(0deg);
-  -webkit-transform-origin: 50% 50%;
-} */
