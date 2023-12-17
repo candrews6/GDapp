@@ -7,16 +7,25 @@ body {
 img {
   width: 100%;
   text-align: center;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 
 a {
+  /* position: fixed; */
   width: 33%;
   display: inline-block;
   text-align: center;
+  /* text-align: justify; */
+  /* justify-content: space-between; */
   color: black;
   text-decoration: none;
+  filter: alpha(opacity=80);
+}
+
+p {
+  text-align: center;
+
 }
 
 table {
@@ -32,12 +41,15 @@ svg {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
+  text-align: center;
 }
 
 .column {
   flex: 25%;
   max-width: 33%;
   padding: 0 4px;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 .column img {
@@ -58,4 +70,13 @@ svg {
     flex: 100%;
     max-width: 100%;
   }
+}
+
+header {
+  position: fixed;
+  width: 88vw;
+  text-align: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  /* padding-right: 50px; */
 }
