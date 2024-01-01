@@ -13,7 +13,7 @@ html
   body
     block content
     script.
-      AOS.init();
+      AOS.init({useClassNames: true,});
     script.
       $(window).scroll(function() {
         $(".scale").css({"-moz-transform": "scale(0.4,0.4)", "webkit-transform": "scale(0.4,0.4)"});
@@ -21,5 +21,9 @@ html
             $(".scale").css({"-moz-transform": "scale(1,1)", "webkit-transform": "scale(1,1)"});
           }
       });
+    script.
+      function setDelay() {
+        document.querySelector('#pa1').setAttribute('data-aos-delay', 9000)
+      }
 
 
