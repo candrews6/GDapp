@@ -9,21 +9,53 @@ html
     link(href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet")
     link(rel='stylesheet' href='/stylesheets/style.css')
     link(rel='stylesheet' href='https://unpkg.com/aos@next/dist/aos.css')
+    link(src="https://cdn.jsdelivr.net/npm/textify.js@3.0.1/dist/Textify.min.css" rel="stylesheet")
+    script(src="https://cdn.jsdelivr.net/npm/textify.js@3.0.1/dist/Textify.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js")
+    link(src="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet")
   //- body(oncontextmenu="return false;")
   body
     block content
     script.
+      import gsap from "gsap";
+      import Textify from "textify.js"; 
+      import FontFaceObserver from "fontfaceobserver"; 
+
+      const font = new FontFaceObserver("Source Code Pro"); 
+
+      font.load().then(() => { 
+        new Textify(); 
+      });
+      textObj.animateIn();
+    script.
       AOS.init({useClassNames: true,});
     script.
+      $(document).ready(function(){
+        $('.path1').animate({top: "57px"}, 1000);
+        $('.path2').animate({top: "57px"}, 900);
+        $('.path3').animate({top: "57px"}, 800);
+        $('.path4').animate({top: "57px"}, 700);
+        $('.path5').animate({top: "57px"}, 600);
+        $('.path6').animate({top: "57px"}, 500);
+        $('.path7').animate({top: "57px"}, 600);
+        $('.path8').animate({top: "57px"}, 700);
+        $('.path9').animate({top: "57px"}, 800);
+        $('.path10').animate({top: "57px"}, 900);
+        $('.path11').animate({top: "57px"}, 1000);
+      });
+      //-   if ( $( ".path1" ).first().is( ":hidden" ) ) {
+      //-     $( ".path1" ).show( "slow" );
+      //-   }
+      //-   else
+      //-   {
+      //-     $( ".path1" ).slideUp("slow");
+      //-   }
+      //- });
+    script.
       $(window).scroll(function() {
-        $(".scale").css({"-moz-transform": "scale(0.4,0.4)", "webkit-transform": "scale(0.4,0.4)"});
+        $(".scale").css({"transform": "scale(0.4,0.4)","-moz-transform": "scale(0.4,0.4)", "webkit-transform": "scale(0.4,0.4)"});
           if ($(this).scrollTop()==0){
-            $(".scale").css({"-moz-transform": "scale(1,1)", "webkit-transform": "scale(1,1)"});
+            $(".scale").css({"transform": "scale(1,1)","-moz-transform": "scale(1,1)", "webkit-transform": "scale(1,1)"});
           }
       });
-    script.
-      function setDelay() {
-        document.querySelector('#pa1').setAttribute('data-aos-delay', 9000)
-      }
-
 

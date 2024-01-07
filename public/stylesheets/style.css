@@ -34,14 +34,30 @@ table {
   background-color: black;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .scale {
   align-self: center;
   text-align: center;
   width: 100%;
+  /* top: 400px; */
   position: fixed;
   mix-blend-mode: difference;
   filter: invert(1);
   -webkit-filter: (invert(1));
+  /* transition: 0.5s ease-out; */
+  /*browser specific versions*/
+  -moz-transition: 0.5s ease-out;
+  -ms-transition: 0.5s ease-out;
+  -webkit-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+  transition: all 0.4s;
+}
+
+.hide {
+  transform: translateY(0%);
 }
 
 .row {
