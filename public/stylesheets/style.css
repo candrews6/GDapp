@@ -1,6 +1,6 @@
 body {
   padding-top: 50px;
-  font-family: 'Source Code Pro', monospace, "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Mono', monospace, "Lucida Grande", Helvetica, Arial, sans-serif;
   font: 14px;
   background-color: white;
 }
@@ -8,14 +8,16 @@ body {
 img {
   width: 100%;
   text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 1rem;
+  /* padding-top: 3rem; */
+  /* padding-bottom: 1rem; */
 }
 
 a {
   margin-bottom: 50px;
-  width: 33%;
-  display: inline-block;
+  margin-left: 60px;
+  margin-right: 80px;
+  /* width: 10%; */
+  /* display: inline-block; */
   text-align: center;
   color: black;
   text-decoration: none;
@@ -24,14 +26,16 @@ a {
 
 h5 {
   position: relative;
-  top: 15em;
+  /* top: 15em; */
   text-align: center;
-  margin-bottom: 15em;
+  /* margin-bottom: 15em; */
 }
 
 table {
   width: 100%;
   background-color: black;
+  text-align: center;
+
 }
 
 .hidden {
@@ -42,11 +46,13 @@ table {
   align-self: center;
   text-align: center;
   width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
   /* top: 400px; */
-  position: fixed;
-  mix-blend-mode: difference;
-  filter: invert(1);
-  -webkit-filter: (invert(1));
+  /* position: fixed; */
+  /* mix-blend-mode: difference; */
+  /* filter: invert(1); */
+  /* -webkit-filter: (invert(1)); */
   /* transition: 0.5s ease-out; */
   /*browser specific versions*/
   -moz-transition: 0.5s ease-out;
@@ -56,26 +62,29 @@ table {
   transition: all 0.4s;
 }
 
-.hide {
-  transform: translateY(0%);
-}
+
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  /* padding: 0 4px; */
   text-align: center;
 }
 
 .column {
-  flex: 25%;
-  max-width: 33%;
-  padding: 0 4px;
+  flex: 50%;
+  max-width: 50%;
+  text-align: center;
+
+  /* padding: 0 4px; */
 }
 
 .column img {
-  margin-top: 8px;
+  background-color: black;
+  aspect-ratio: 16 / 9;
+  /* margin-top: 8px; */
   vertical-align: middle;
+  text-align: center;
   width: 100%;
 }
 
@@ -94,9 +103,15 @@ table {
 }
 
 header {
+  display: flex;
+  /* align-items: stretch; */
+  /* Default */
+  justify-content: space-between;
+  align-self: center;
+  text-align: center;
+  width: 100%;
   z-index: 1;
   position: fixed;
-  width: 100vw;
   mix-blend-mode: difference;
   filter: invert(1);
   -webkit-filter: (invert(1));
