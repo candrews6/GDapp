@@ -81,4 +81,10 @@ header {
   mix-blend-mode: difference;
   filter: invert(1);
   -webkit-filter: (invert(1));
+  position: fixed;
+  transition: top 0.2s ease-in-out;
+}
+
+.nav-up {
+  top: -40px;
 }
