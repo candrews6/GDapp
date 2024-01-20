@@ -3,31 +3,41 @@ body {
   font-family: 'Roboto Mono', monospace, "Lucida Grande", Helvetica, Arial, sans-serif;
   font: 14px;
   background-color: white;
-  /* width: 98%; */
-  /* margin: auto; */
+  transition: all .2s linear; 
+  cursor: none;
+ 
+  .cursor {
+    width:40px;
+    height:40px;
+    border:3px solid white;
+    border-radius:50%;
+    position: absolute;
+    box-shadow: 2px -3px 41px -1px rgba(250,250,250,0.64);
+    transition: all .1s linear; 
+    pointer-events: none;
+  }
+:hover {
+    opacity: 1;
+    
+     ~ .cursor {
+        transform: scale(1.4);
+        mix-blend-mode: difference;
+        background: white;
+        
+      }
+  }
 }
+
 
 img {
   width: 100%;
   text-align: center;
-  /* padding-top: 3rem; */
-  /* padding-bottom: 1rem; */
 }
-
-/* a {
-  margin-bottom: 50px;
-  text-align: center;
-  color: black;
-  text-decoration: none;
-  filter: alpha(opacity=80);
-} */
 
 h5 {
   position: relative;
-  /* top: 15em; */
   text-align: center;
   padding-bottom: 2em;
-  /* margin-bottom: 10em; */
 }
 
 table {
@@ -47,13 +57,6 @@ table {
   width: 100%;
   padding-top: 3rem;
   padding-bottom: 1rem;
-  /* top: 400px; */
-  /* position: fixed; */
-  /* mix-blend-mode: difference; */
-  /* filter: invert(1); */
-  /* -webkit-filter: (invert(1)); */
-  /* transition: 0.5s ease-out; */
-  /*browser specific versions*/
   -moz-transition: 0.5s ease-out;
   -ms-transition: 0.5s ease-out;
   -webkit-transition: 0.5s ease-out;
@@ -62,6 +65,7 @@ table {
 }
 
 div img {
+  
   aspect-ratio: 16 / 9;
 }
 
@@ -69,15 +73,10 @@ header {
   display: flex;
   flex-direction: row;
   height: auto;
-  /* padding-left: 1em; */
-  /* padding-right: 4em; */
-  /* flex: 1; */
   justify-content: space-between;
-  /* align-self: center; */
   text-align: center;
   width: 100%;
   z-index: 1;
-  /* position: fixed; */
   mix-blend-mode: difference;
   filter: invert(1);
   -webkit-filter: (invert(1));
@@ -87,4 +86,9 @@ header {
 
 .nav-up {
   top: -40px;
+}
+
+a{
+  cursor: none;
+
 }

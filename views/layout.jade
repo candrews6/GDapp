@@ -14,23 +14,12 @@ html
     link(rel='stylesheet' href='https://unpkg.com/aos@next/dist/aos.css')
     link(src="https://cdn.jsdelivr.net/npm/textify.js@3.0.1/dist/Textify.min.css" rel="stylesheet")
     script(src="https://cdn.jsdelivr.net/npm/textify.js@3.0.1/dist/Textify.min.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js")
+    //- script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js")
     link(src="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet")
     script(src="https://cdn.tailwindcss.com")
     //- body(oncontextmenu="return false;")
-    body(style="margin:auto;" class="px-14;")
+    body(style="margin:auto;")
       block content
-      script.
-        import gsap from "gsap";
-        import Textify from "textify.js"; 
-        import FontFaceObserver from "fontfaceobserver"; 
-
-        const font = new FontFaceObserver("Source Code Pro"); 
-
-        font.load().then(() => { 
-          new Textify(); 
-        });
-        textObj.animateIn();
       script.
         AOS.init({useClassNames: true,});
       script.
@@ -75,6 +64,41 @@ html
             }
           lastScrollTop = st;
         }
+      script.
+        let title = document.querySelector('.title');
+        let curs = document.querySelector('.cursor');
+        
+        document.addEventListener('mousemove', (e) => {
+          let x = e.pageX;
+          let y = e.pageY;
+          curs.style.left = (x - 22) + "px";
+          curs.style.top = (y - 22) + "px";
+        });
+        document.addEventListener('mouseleave', (e) => {
+          let x = e.pageX;
+          let y = e.pageY;
+          curs.style.left = (x - 22) + "px";
+          curs.style.top = (y - 22) + "px";
+        });
+
+        function readMore() {
+          var dots = document.getElementById("dots");
+          var moreText = document.getElementById("more");
+          var btnText = document.getElementById("myBtn");
+          
+          if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+          }
+          else {
+              dots.style.display = "none";
+              btnText.innerHTML = "Read less";
+              moreText.style.display = "inline";
+          }
+        }
+
+
   //-   if ( $( ".path1" ).first().is( ":hidden" ) ) {
   //-     $( ".path1" ).show( "slow" );
   //-   }

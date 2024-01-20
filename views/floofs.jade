@@ -1,0 +1,24 @@
+extends layout
+block content
+  header(class="px-14")= inline
+    a(href="/" class="pr-6")= "WORK"
+    a(href="/about")= "ABOUT"
+    a(href="/contact")= "CONTACT"
+
+  img(src="images/Header-01.svg" alt="logo" class="scale hide px-4")
+  div(class="grid grid-cols-1 gap-0 px-14" oncontextmenu="return false")
+    img(src="images/001_all3_Header.jpg" alt="All 3" onerror="this.src='images/alt2.png'")
+    img(src="images/002_Sketch.jpg" alt="Sketch" onerror="this.src='images/alt2.png'")
+    img(src="images/003_ill_all3.jpg" alt="Illustrator all 3" onerror="this.src='images/alt2.png'")
+    video(autoplay, muted, loop)
+      source(src='images/004_Comp 1_1.mp4', type='video/mp4')
+    img(src="images/005_Purple_Crop.jpg" alt="Purple Crop" onerror="this.src='images/alt2.png'")
+    video(autoplay, muted, loop src="images/006_3_changecolour.mp4" alt="Change Colour" onerror="this.src='images/alt2.png'")
+    //- img(src="" alt="" onerror="this.src='images/alt2.png'")
+    img(src="images/008_Teal_Front_Back.jpg" alt="Teal Front Back" onerror="this.src='images/alt2.png'")
+    img(src="images/010Orange_FrontBack.jpg" alt="Orange Front Back" onerror="this.src='images/alt2.png'")
+    img(src="images/011_Purp_Front_Back.jpg" alt="Purple Front Back" onerror="this.src='images/alt2.png'")
+    img(src="images/008_Teal_Front_Back.jpg" alt="test8" onerror="this.src='images/alt2.png'")
+    img(src="images/012_Front.jpg" alt="Front" onerror="this.src='images/alt2.png'")
+    video(autoplay, muted, loop src="images/012.mp4" alt="12" onerror="this.src='images/alt2.png'")
+  div(class="cursor")
