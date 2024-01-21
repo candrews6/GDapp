@@ -6,19 +6,28 @@ block content
     a(href="/contact")= "CONTACT"
 
   img(src="images/Header-01.svg" alt="logo" class="scale hide px-4")
-  div(class="grid grid-cols-1 gap-0 px-14" oncontextmenu="return false")
-    img(src="images/001_all3_Header.jpg" alt="All 3" onerror="this.src='images/alt2.png'")
-    img(src="images/002_Sketch.jpg" alt="Sketch" onerror="this.src='images/alt2.png'")
-    img(src="images/003_ill_all3.jpg" alt="Illustrator all 3" onerror="this.src='images/alt2.png'")
-    video(autoplay, muted, loop)
+  div(class="py-10 ml-10 px-4" style="display:grid;")
+    div(style="display: grid; grid-template-columns: auto auto;" class="")
+      p(class="text-left text-4xl pr-40" style="font-weight:bold;")="FLOOFS - Bottle design"
+      p(class="text-left text-2xl" style="width:60%; font-weight:bold;")="A range of dog shampoo bottle designs for FLOOFS"
+      h6(style="width:50%;")="Packaging (Bottle Design), Art Direction Illustration, Print Design, Typography"
+  div(class="grid grid-cols-1 gap-0 px-14 gap-y-5 pt-20" oncontextmenu="return false")
+    img(src="images/001_all3_Header.jpg" alt="All 3" onerror="this.src='images/alt3.png'")
+    h6(class="mb-20" style="width:50%")="Floofs, a prominent dog grooming company, embarked on a quest to redefine its shampoo range’s packaging design. With each variant boasting a distinct scent, the challenge was to craft a design that not only differentiated each bottle but also infused them with unique personalities. "
+      button(onclick="readMore()" id="myBtn")="see more"
+      span(id="dots")="..."
+      span(id="more")= "The design approach ingeniously utilized customized prints, pairing specific dogs and colors to artfully represent the essence of each fragrance. This case study explores how Floofs collaborated with our design team to transform their shampoo packaging into an engaging and distinctive showcase of canine-inspired scents."
+    img(src="images/002_Sketch.jpg" alt="Sketch" onerror="this.src='images/alt3.png'")
+    img(src="images/003_ill_all3.jpg" alt="Illustrator all 3" onerror="this.src='images/alt3.png'")
+    video(autoplay, muted, loop, playsinline)
       source(src='images/004_Comp 1_1.mp4', type='video/mp4')
-    img(src="images/005_Purple_Crop.jpg" alt="Purple Crop" onerror="this.src='images/alt2.png'")
-    video(autoplay, muted, loop src="images/006_3_changecolour.mp4" alt="Change Colour" onerror="this.src='images/alt2.png'")
-    //- img(src="" alt="" onerror="this.src='images/alt2.png'")
-    img(src="images/008_Teal_Front_Back.jpg" alt="Teal Front Back" onerror="this.src='images/alt2.png'")
-    img(src="images/010Orange_FrontBack.jpg" alt="Orange Front Back" onerror="this.src='images/alt2.png'")
-    img(src="images/011_Purp_Front_Back.jpg" alt="Purple Front Back" onerror="this.src='images/alt2.png'")
-    img(src="images/008_Teal_Front_Back.jpg" alt="test8" onerror="this.src='images/alt2.png'")
-    img(src="images/012_Front.jpg" alt="Front" onerror="this.src='images/alt2.png'")
-    video(autoplay, muted, loop src="images/012.mp4" alt="12" onerror="this.src='images/alt2.png'")
+    img(src="images/005_Purple_Crop.jpg" alt="Purple Crop" onerror="this.src='images/alt3.png'")
+    video(autoplay, muted, loop, playsinline src="images/006_3_changecolour.mp4" alt="Change Colour" onerror="this.src='images/alt3.png'")
+    img(src="images/007_dog_Bath_1.jpg" alt="dog bath 1" onerror="this.src='images/alt3.png'")
+    img(src="images/008_Teal_Front_Back.jpg" alt="Teal Front Back" onerror="this.src='images/alt3.png'")
+    img(src="images/009_dog_bath_2.jpg" alt="dog bath 2" onerror="this.src='images/alt3.png'")
+    img(src="images/010Orange_FrontBack.jpg" alt="Orange Front Back" onerror="this.src='images/alt3.png'")
+    img(src="images/011_Purp_Front_Back.jpg" alt="Purple Front Back" onerror="this.src='images/alt3.png'")
+    video(autoplay, muted, loop, playsinline src="images/012.mp4" alt="12" onerror="this.src='images/alt3.png'")
+    img(src="images/013_bottles.jpg" alt="bottles" onerror="this.src='images/alt3.png'")
   div(class="cursor")

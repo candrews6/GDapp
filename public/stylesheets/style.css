@@ -92,3 +92,8 @@ a{
   cursor: none;
 
 }
+
+#more {
+
+  display: none;
+}
