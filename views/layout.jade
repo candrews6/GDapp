@@ -97,6 +97,11 @@ html
               moreText.style.display = "inline-grid";
           }
         }
+        $("#GDLogo").css("display", "none");
+        // Remove the display property after the page loads using jQuery's $(document).ready() function
+        $(document).ready(function() {
+          $("#GDLogo").css("display", "block");
+        });
 
 
   //-   if ( $( ".path1" ).first().is( ":hidden" ) ) {
