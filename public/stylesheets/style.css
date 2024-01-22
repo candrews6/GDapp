@@ -29,9 +29,10 @@ body {
 }
 
 
-img {
+object {
   width: 100%;
   text-align: center;
+  pointer-events: none;
 }
 
 h5 {
@@ -88,10 +89,10 @@ header {
   top: -40px;
 }
 
-a{
+/* a{
   cursor: none;
 
-}
+} */
 
 #more {
 
