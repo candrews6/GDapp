@@ -12,88 +12,84 @@ html
     link(href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet")
     link(rel='stylesheet' href='/stylesheets/style.css')
     link(rel='stylesheet' href='https://unpkg.com/aos@next/dist/aos.css')
-    link(src="https://cdn.jsdelivr.net/npm/textify.js@3.0.1/dist/Textify.min.css" rel="stylesheet")
-    script(src="https://cdn.jsdelivr.net/npm/textify.js@3.0.1/dist/Textify.min.js")
-    //- script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js")
-    link(src="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet")
     script(src="https://cdn.tailwindcss.com")
     //- body(oncontextmenu="return false;")
     block content
     body(style="margin:auto;")
-        header(class="px-14")= inline
-          a(href="/" class="pr-6")= "WORK" 
-          a(href="/about")= "ABOUT"
-          a(href="/contact")= "CONTACT"
-        a(href="/")
-          object(type="image/svg+xml" link="/" data="images/Header-01.svg" id="GDLogo" alt="logo" class="scale hide px-4" data-aos )
-        script.
-          AOS.init({useClassNames: true,});
-        script.
-          var didScroll;
-          var lastScrollTop = 0;
-          var delta = 5;
-          var navbarHeight = $('header').outerHeight();
-          $(window).scroll(function(event){
-            didScroll = true;
-          });
-          setInterval(function() {
-            if (didScroll) {
-              hasScrolled();
-              didScroll = false;
-            }
-          }, 250);
-
-          function hasScrolled() {
-            var st = $(this).scrollTop();
-            if(Math.abs(lastScrollTop - st) <= delta)
-            return;
-            if (st > lastScrollTop && st > navbarHeight){
-              $('header').removeClass('nav-down').addClass('nav-up');
-            } else {
-              if(st + $(window).height() < $(document).height()) {
-                $('header').removeClass('nav-up').addClass('nav-down');
-              }
-              }
-            lastScrollTop = st;
+      header(class="px-14")= inline
+        a(href="/" class="pr-6")= "WORK"
+        a(href="/about")= "ABOUT"
+        a(href="/contact")= "CONTACT"
+      a( href="/")
+        object(type="image/svg+xml" link="/" data="images/Header_v2-01.svg" id="GDLogo" alt="logo" class="scale hide px-14" data-aos )
+      script.
+        AOS.init({useClassNames: true,});
+      script.
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('header').outerHeight();
+        $(window).scroll(function(event){
+          didScroll = true;
+        });
+        setInterval(function() {
+          if (didScroll) {
+            hasScrolled();
+            didScroll = false;
           }
-        script.
-          let title = document.querySelector('.title');
-          let curs = document.querySelector('.cursor');
+        }, 250);
 
-          document.addEventListener('mousemove', (e) => {
-            let x = e.pageX;
-            let y = e.pageY;
-            curs.style.left = (x - 22) + "px";
-            curs.style.top = (y - 22) + "px";
-          });
-          document.addEventListener('mouseleave', (e) => {
-            let x = e.pageX;
-            let y = e.pageY;
-            curs.style.left = (x - 22) + "px";
-            curs.style.top = (y - 22) + "px";
-          });
-
-          function readMore() {
-            var dots = document.getElementById("dots");
-            var moreText = document.getElementById("more");
-            var btnText = document.getElementById("myBtn");
-
-            if (dots.style.display === "none") {
-              dots.style.display = "inline-grid";
-              btnText.innerHTML = "see more";
-              moreText.style.display = "none";
+        function hasScrolled() {
+          var st = $(this).scrollTop();
+          if(Math.abs(lastScrollTop - st) <= delta)
+          return;
+          if (st > lastScrollTop && st > navbarHeight){
+            $('header').removeClass('nav-down').addClass('nav-up');
+          } else {
+            if(st + $(window).height() < $(document).height()) {
+              $('header').removeClass('nav-up').addClass('nav-down');
             }
-            else {
-              dots.style.display = "none";
-              btnText.innerHTML = "see less";
-              moreText.style.display = "inline-grid";
             }
+          lastScrollTop = st;
+        }
+      script.
+        let title = document.querySelector('.title');
+        let curs = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', (e) => {
+          let x = e.pageX;
+          let y = e.pageY;
+          curs.style.left = (x - 22) + "px";
+          curs.style.top = (y - 22) + "px";
+        });
+        document.addEventListener('mouseleave', (e) => {
+          let x = e.pageX;
+          let y = e.pageY;
+          curs.style.left = (x - 22) + "px";
+          curs.style.top = (y - 22) + "px";
+        });
+
+        function readMore() {
+          var dots = document.getElementById("dots");
+          var moreText = document.getElementById("more");
+          var btnText = document.getElementById("myBtn");
+
+          if (dots.style.display === "none") {
+            dots.style.display = "inline-grid";
+            btnText.innerHTML = "see more";
+            moreText.style.display = "none";
           }
-          $("#GDLogo").css("display", "none");
-          // Remove the display property after the page loads using jQuery's $(document).ready() function
-          $(document).ready(function() {
-            $("#GDLogo").css("display", "block");
-          });
+          else {
+            dots.style.display = "none";
+            btnText.innerHTML = "see less";
+            moreText.style.display = "inline-grid";
+          }
+        }
+        $("#GDLogo").css("display", "none");
+        // Remove the display property after the page loads using jQuery's $(document).ready() function
+        $(document).ready(function() {
+          $("#GDLogo").css("display", "block");
+        });
 
 
   //-   if ( $( ".path1" ).first().is( ":hidden" ) ) {

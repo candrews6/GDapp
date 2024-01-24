@@ -3,9 +3,9 @@ body {
   font-family: 'Roboto Mono', monospace, "Lucida Grande", Helvetica, Arial, sans-serif;
   font: 14px;
   background-color: white;
-  transition: all .2s linear; 
+  transition: all .2s linear;
   /* cursor: none; */
- 
+
   /* .cursor {
     width:40px;
     height:40px;
@@ -66,7 +66,7 @@ table {
 }
 
 div img {
-  
+
   aspect-ratio: 16 / 9;
 }
 
@@ -98,8 +98,9 @@ header {
 
   display: none;
 }
-#GDLogo
-{
+
+#GDLogo {
   /* animation: enter 0.8s var(--transition-bounce) forwards; */
   display: none;
+  pointer-events: none;
 }
