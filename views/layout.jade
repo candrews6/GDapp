@@ -18,90 +18,82 @@ html
     link(src="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet")
     script(src="https://cdn.tailwindcss.com")
     //- body(oncontextmenu="return false;")
+    block content
     body(style="margin:auto;")
-      block content
-      script.
-        AOS.init({useClassNames: true,});
-      script.
-        $(document).ready(function(){
-          $('.path1').animate({top: "57px"}, 1000);
-          $('.path2').animate({top: "57px"}, 900);
-          $('.path3').animate({top: "57px"}, 800);
-          $('.path4').animate({top: "57px"}, 700);
-          $('.path5').animate({top: "57px"}, 600);
-          $('.path6').animate({top: "57px"}, 500);
-          $('.path7').animate({top: "57px"}, 600);
-          $('.path8').animate({top: "57px"}, 700);
-          $('.path9').animate({top: "57px"}, 800);
-          $('.path10').animate({top: "57px"}, 900);
-          $('.path11').animate({top: "57px"}, 1000);
-        });
-      script.
-        var didScroll;
-        var lastScrollTop = 0;
-        var delta = 5;
-        var navbarHeight = $('header').outerHeight();
-        $(window).scroll(function(event){
-          didScroll = true;
-        });
-        setInterval(function() {
-          if (didScroll) {
-            hasScrolled();
-            didScroll = false;
-          }
-        }, 250);
-
-        function hasScrolled() {
-          var st = $(this).scrollTop();
-          if(Math.abs(lastScrollTop - st) <= delta)
-          return;
-          if (st > lastScrollTop && st > navbarHeight){
-            $('header').removeClass('nav-down').addClass('nav-up');
-          } else {
-            if(st + $(window).height() < $(document).height()) {
-              $('header').removeClass('nav-up').addClass('nav-down');
+        header(class="px-14")= inline
+          a(href="/" class="pr-6")= "WORK" 
+          a(href="/about")= "ABOUT"
+          a(href="/contact")= "CONTACT"
+        a(href="/")
+          object(type="image/svg+xml" link="/" data="images/Header-01.svg" id="GDLogo" alt="logo" class="scale hide px-4" data-aos )
+        script.
+          AOS.init({useClassNames: true,});
+        script.
+          var didScroll;
+          var lastScrollTop = 0;
+          var delta = 5;
+          var navbarHeight = $('header').outerHeight();
+          $(window).scroll(function(event){
+            didScroll = true;
+          });
+          setInterval(function() {
+            if (didScroll) {
+              hasScrolled();
+              didScroll = false;
             }
-            }
-          lastScrollTop = st;
-        }
-      script.
-        let title = document.querySelector('.title');
-        let curs = document.querySelector('.cursor');
-        
-        document.addEventListener('mousemove', (e) => {
-          let x = e.pageX;
-          let y = e.pageY;
-          curs.style.left = (x - 22) + "px";
-          curs.style.top = (y - 22) + "px";
-        });
-        document.addEventListener('mouseleave', (e) => {
-          let x = e.pageX;
-          let y = e.pageY;
-          curs.style.left = (x - 22) + "px";
-          curs.style.top = (y - 22) + "px";
-        });
+          }, 250);
 
-        function readMore() {
-          var dots = document.getElementById("dots");
-          var moreText = document.getElementById("more");
-          var btnText = document.getElementById("myBtn");
-          
-          if (dots.style.display === "none") {
-            dots.style.display = "inline-grid";
-            btnText.innerHTML = "see more";
-            moreText.style.display = "none";
+          function hasScrolled() {
+            var st = $(this).scrollTop();
+            if(Math.abs(lastScrollTop - st) <= delta)
+            return;
+            if (st > lastScrollTop && st > navbarHeight){
+              $('header').removeClass('nav-down').addClass('nav-up');
+            } else {
+              if(st + $(window).height() < $(document).height()) {
+                $('header').removeClass('nav-up').addClass('nav-down');
+              }
+              }
+            lastScrollTop = st;
           }
-          else {
+        script.
+          let title = document.querySelector('.title');
+          let curs = document.querySelector('.cursor');
+
+          document.addEventListener('mousemove', (e) => {
+            let x = e.pageX;
+            let y = e.pageY;
+            curs.style.left = (x - 22) + "px";
+            curs.style.top = (y - 22) + "px";
+          });
+          document.addEventListener('mouseleave', (e) => {
+            let x = e.pageX;
+            let y = e.pageY;
+            curs.style.left = (x - 22) + "px";
+            curs.style.top = (y - 22) + "px";
+          });
+
+          function readMore() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+              dots.style.display = "inline-grid";
+              btnText.innerHTML = "see more";
+              moreText.style.display = "none";
+            }
+            else {
               dots.style.display = "none";
-              btnText.innerHTML = "";
+              btnText.innerHTML = "see less";
               moreText.style.display = "inline-grid";
+            }
           }
-        }
-        $("#GDLogo").css("display", "none");
-        // Remove the display property after the page loads using jQuery's $(document).ready() function
-        $(document).ready(function() {
-          $("#GDLogo").css("display", "block");
-        });
+          $("#GDLogo").css("display", "none");
+          // Remove the display property after the page loads using jQuery's $(document).ready() function
+          $(document).ready(function() {
+            $("#GDLogo").css("display", "block");
+          });
 
 
   //-   if ( $( ".path1" ).first().is( ":hidden" ) ) {

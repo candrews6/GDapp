@@ -1,12 +1,6 @@
-extends layout
-block content
-  header(class="px-14")= inline
-    a(href="/" class="pr-6")= "WORK"
-    a(href="/about")= "ABOUT"
-    a(href="/contact")= "CONTACT"
+include layout
 
-  a(href="/")
-    object(type="image/svg+xml" link="/" data="images/Header-01.svg" id="GDLogo" alt="logo" class="scale hide px-4")
+block content
   div(class="py-10 ml-10 px-4" style="display:grid;")
     div(style="display: grid; grid-template-columns: auto auto;" class="")
       p(class="text-left text-4xl pr-40" style="font-weight:bold;")="FLOOFS - Bottle design"
