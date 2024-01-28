@@ -1,0 +1,30 @@
+include layout
+
+block content
+  div(class="py-10 ml-10 px-4" style="display:grid;")
+    div(style="display: grid; grid-template-columns: auto auto;" class="")
+      p(class="text-left text-4xl pr-40" style="font-weight:bold;")="FLOOFS - Bottle design"
+      p(class="text-left text-2xl" style="width:60%; font-weight:bold;")="A range of dog shampoo bottle designs for FLOOFS"
+      h6(style="width:50%;")="Packaging (Bottle Design), Art Direction Illustration, Print Design, Typography"
+  div(class="grid grid-cols-1 gap-0 px-14 gap-y-5 pt-20" oncontextmenu="return false")
+    img(src="images/001_all3_Header.jpg" alt="All 3" onerror="this.src='images/alt3.png'")
+    h6(class="mb-20" style="width:50%")="Floofs, a prominent dog grooming company, embarked on a quest to redefine its shampoo range’s packaging design. With each variant boasting a distinct scent, the challenge was to craft a design that not only differentiated each bottle but also infused them with unique personalities. "
+      button(id="toggleButton" onclick="toggleText();" href="javascript:void(0);" style="font-weight:bold; font-size:15pt;")="see more..."
+      //- span(id="dots" style="font-weight:bold; font-size:15pt;")="..."
+      span(id="textArea" style="font-weight:bold; ")= ""
+      //- button(onclick="readLess()" style="font-weight:bold; font-size:15pt;" id="myLessBtn" class="")="See less"
+    img(src="images/002_Sketch.jpg" alt="Sketch" onerror="this.src='images/alt3.png'")
+    img(src="images/003_ill_all3.jpg" alt="Illustrator all 3" onerror="this.src='images/alt3.png'")
+    video(autoplay, muted, loop, playsinline)
+      source(src='images/004_Comp 1_1.mp4' type='video/mp4')
+    img(src="images/005_Purple_Crop.jpg" alt="Purple Crop" onerror="this.src='images/alt3.png'")
+    video(autoplay, muted, loop, playsinline src="images/3_changecolour.mp4" alt="Change Colour" onerror="this.src='images/alt3.png'")
+    img(src="images/007_dog_Bath_1.jpg" alt="dog bath 1" onerror="this.src='images/alt3.png'")
+    img(src="images/008_Teal_Front_Back.jpg" alt="Teal Front Back" onerror="this.src='images/alt3.png'")
+    img(src="images/009_dog_bath_2.jpg" alt="dog bath 2" onerror="this.src='images/alt3.png'")
+    img(src="images/010Orange_FrontBack.jpg" alt="Orange Front Back" onerror="this.src='images/alt3.png'")
+    img(src="images/011_Purp_Front_Back.jpg" alt="Purple Front Back" onerror="this.src='images/alt3.png'")
+    video(autoplay, muted, loop, playsinline src="images/012.mp4" alt="12" onerror="this.src='images/alt3.png'")
+    img(src="images/floofshoodie.jpg" alt="floofs hoodie" onerror="this.src='images/alt3.png'")
+    img(src="images/013_bottles.jpg" alt="bottles" onerror="this.src='images/alt3.png'")
+  div(class="cursor")
