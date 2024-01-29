@@ -8,10 +8,15 @@ block content
       h6(style="width:50%;")="Packaging (Bottle Design), Art Direction Illustration, Print Design, Typography"
   div(class="grid grid-cols-1 gap-0 px-14 gap-y-5 pt-20" oncontextmenu="return false")
     img(src="images/001_all3_Header.jpg" alt="All 3" onerror="this.src='images/alt3.png'")
-    h6(class="mb-20" style="width:50%")="Floofs, a prominent dog grooming company, embarked on a quest to redefine its shampoo range’s packaging design. With each variant boasting a distinct scent, the challenge was to craft a design that not only differentiated each bottle but also infused them with unique personalities. "
-      button(id="toggleButton" onclick="toggleText();" href="javascript:void(0);" style="font-weight:bold; font-size:15pt;")="see more..."
+    h6(class="mb-20" style="width:50%")
+      //- ="Floofs, a prominent dog grooming company, embarked on a quest to redefine its shampoo range’s packaging design. With each variant boasting a distinct scent, the challenge was to craft a design that not only differentiated each bottle but also infused them with unique personalities. "
+      p(x-data="{ truncate: true }")= "Floofs, a prominent dog grooming company, embarked on a quest to redefine its shampoo range’s packaging design. With each variant boasting a distinct scent, the challenge was to craft a design that not only differentiated each bottle but also infused them with unique personalities. "
+        span(x-show="!truncate")= " The design approach ingeniously utilized customized prints, pairing specific dogs and colors to artfully represent the essence of each fragrance. This case study explores how Floofs collaborated with our design team to transform their shampoo packaging into an engaging and distinctive showcase of canine-inspired scents."
+        a(href="#" @click="truncate = false" x-show="truncate" x-on:click.prevent="tab = 'view'" style="font-weight:bold; font-size:14pt;")= "See more..."
+        a(x-show="!truncate" href="#" @click="truncate = true" x-on:click.prevent="tab = 'view'" style="font-weight:bold; font-size:14pt;")= " See less"
+      //- button(id="toggleButton" onclick="toggleText();" href="javascript:void(0);" style="font-weight:bold; font-size:15pt;")="see more..."
       //- span(id="dots" style="font-weight:bold; font-size:15pt;")="..."
-      span(id="textArea" style="font-weight:bold; ")= ""
+      //- span(id="textArea" style="font-weight:bold; ")= ""
       //- button(onclick="readLess()" style="font-weight:bold; font-size:15pt;" id="myLessBtn" class="")="See less"
     img(src="images/002_Sketch.jpg" alt="Sketch" onerror="this.src='images/alt3.png'")
     img(src="images/003_ill_all3.jpg" alt="Illustrator all 3" onerror="this.src='images/alt3.png'")
