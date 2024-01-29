@@ -832,6 +832,10 @@ video {
   display: none;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
 .w-\[this-is\\\\\] {
   width: this-is\\;
 }
@@ -2488,9 +2492,9 @@ table {
   text-align: center;
 }
 
-/* .hidden {
+.hidden {
   visibility: hidden;
-} */
+}
 
 .scale {
   align-self: center;

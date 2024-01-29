@@ -53,9 +53,9 @@ table {
 
 }
 
-/* .hidden {
+.hidden {
   visibility: hidden;
-} */
+}
 
 .scale {
   align-self: center;
