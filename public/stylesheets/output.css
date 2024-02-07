@@ -653,10 +653,6 @@ video {
   inset-inline-end: 0.25rem;
 }
 
-.top-10 {
-  top: 2.5rem;
-}
-
 .isolate {
   isolation: isolate;
 }
@@ -830,10 +826,6 @@ video {
 
 .h-6 {
   height: 1.5rem;
-}
-
-.h-1 {
-  height: 0.25rem;
 }
 
 .w-\[this-is\\\\\] {
@@ -1600,6 +1592,12 @@ video {
   scroll-behavior: smooth;
 }
 
+.\!truncate {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1948,11 +1946,6 @@ video {
   padding-bottom: 2.5rem;
 }
 
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -1968,14 +1961,6 @@ video {
 
 .pt-20 {
   padding-top: 5rem;
-}
-
-.pt-7 {
-  padding-top: 1.75rem;
-}
-
-.pb-6 {
-  padding-bottom: 1.5rem;
 }
 
 .text-left {
